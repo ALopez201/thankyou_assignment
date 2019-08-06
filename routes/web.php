@@ -19,10 +19,10 @@ Route::get('about', function () {
     return view('pages.about');
 });
 
-Route::get('contacts', function () {
+Route::get('contact', function () {
     return view('pages.contact');
 });
 
-Route::post('contact', function () {
+Route::post('/', function () {
     return view('welcome');
 });
