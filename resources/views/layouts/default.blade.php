@@ -12,5 +12,6 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 @include("includes.jsfooter")
 @include("includes.footer")
+
 </body>
 </html>

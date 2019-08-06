@@ -23,6 +23,6 @@ Route::get('contacts', function () {
     return view('pages.contact');
 });
 
-Route::post('contacts', function () {
+Route::post('contact', function () {
     return view('welcome');
 });
