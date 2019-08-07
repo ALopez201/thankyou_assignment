@@ -11,21 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
-
-Route::get('about', function () {
-    return view('pages.about');
-});
-
-Route::get('contact', function () {
-    return view('pages.contact');
-});
-
-Route::post('contact', function () {
-    $data = request()->all();
-    echo "Hey, " .$data{"user"}, "<br>";
-    echo "Thanks for your message - " .$data{"body"};
-
-});
+Route::get('/', 'Pagescontroller@index') ->name ('index');
+Route::get('/contact', 'Pagescontroller@contact') ->name('contact');
+Route::get('/about', 'Pagescontroller@about') ->name('about');
+Route::post('/contact', 'Pagescontroller@store') ->name('contact.Store');
+Route::get('thanks/{name}', 'Pagescontroller@thanks') ->name('thanks');
